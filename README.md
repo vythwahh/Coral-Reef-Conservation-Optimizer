@@ -1,4 +1,4 @@
-# 🪸 CoralOpt — Coral Reef Conservation Optimizer
+# CoralOpt — Coral Reef Conservation Optimizer
 
 An end-to-end data engineering pipeline that collects real-time ocean temperature data from NOAA, processes it with PySpark, and applies Linear Programming to optimally allocate coral reef conservation budgets.
 
