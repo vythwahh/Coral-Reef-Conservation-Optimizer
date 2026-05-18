@@ -1,9 +1,0 @@
-{
-  "timestamp": "2026-05-18T08:55:44.898226",
-  "budget": 700000,
-  "total_cost": 700000.0,
-  "budget_used_pct": 100.0,
-  "total_impact": 1.1419,
-  "status": "Optimal",
-  "n_zones": 1
-}

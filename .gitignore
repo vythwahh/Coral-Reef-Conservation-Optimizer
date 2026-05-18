@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Output data (không cần push)
+output/
+
+# Airflow
+airflow.cfg
+airflow.db
