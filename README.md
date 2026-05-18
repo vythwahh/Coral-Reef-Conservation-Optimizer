@@ -3,6 +3,7 @@
 An end-to-end data engineering pipeline that collects real-time ocean temperature data from NOAA, processes it with PySpark, and applies Linear Programming to optimally allocate coral reef conservation budgets.
 
 ## Pipeline Architecture
+NOAA ERDDAP API → Kafka (Confluent Cloud) → PySpark → Airflow DAG → LP Solver → Streamlit
 ## Tech Stack
 
 | Layer | Technology |
