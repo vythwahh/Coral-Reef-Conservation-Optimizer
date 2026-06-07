@@ -5,19 +5,20 @@ An enterprise-grade, end-to-end data engineering and operations research pipelin
 ---
 
 ## Pipeline Architecture
+
+```text
 +------------------+      +-------------------+      +--------------------+
 |  NOAA ERDDAP API | ---> |   Apache Kafka    | ---> |  PySpark Streaming |
 | (Real-time SST)  |      | (Confluent Cloud) |      | (Risk Computation) |
 +------------------+      +-------------------+      +--------------------+
-|
+                                                               |
 +------------------+      +-------------------+                v
 |Streamlit Frontend| <--- | Custom LP Solver  | <--- +--------------------+
 |   (Dashboard)    |      | (Simplex Engine)  |      | Apache Airflow DAG |
 +------------------+      +-------------------+      | (Daily Orchestration)|
-+--------------------+
-## ---
+                                                     +--------------------+
 
-## ⚡ Tech Stack & Infrastructure
+## Tech Stack & Infrastructure
 
 | Layer | Technology | Operational Function |
 |---|---|---|
@@ -29,7 +30,7 @@ An enterprise-grade, end-to-end data engineering and operations research pipelin
 
 ---
 
-## 📐 Mathematical Formulation (LP Model)
+## Mathematical Formulation (LP Model)
 
 The core optimization engine allocates financial budgets to maximize ecological resilience across $N$ monitored reef zones, subject to realistic capital and resource constraints.
 
@@ -48,7 +49,7 @@ Where:
 
 ---
 
-## 🌟 Key Engineering Features
+## Key Engineering Features
 
 - **Resilient Network Ingestion:** Real-time SST data streaming from NOAA API with automated schema validation and a randomized mock data generator fallback for network resilience.
 - **Distributed Risk Aggregation:** Utilizes PySpark User Defined Functions (UDFs) to process windowed sliding metrics, capturing thermal anomalies indicative of coral bleaching events.
