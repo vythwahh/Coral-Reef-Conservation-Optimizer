@@ -88,26 +88,26 @@ Coral-Reef-Conservation-Optimizer/
 └── README.md                      # Comprehensive system documentation
 
 
-## **Environment Setup**
+**Environment Setup**
 
-# Clone the repository
+Clone the repository
 git clone [https://github.com/vythwahh/Coral-Reef-Conservation-Optimizer.git](https://github.com/vythwahh/Coral-Reef-Conservation-Optimizer.git)
 cd Coral-Reef-Conservation-Optimizer
 
-# Install environment dependencies
+Install environment dependencies
 pip install -r requirements.txt
 
-## **Running the Ecosystem Pipeline**
+**Running the Ecosystem Pipeline**
 Execute the following processes in separate terminal instances or trigger them natively via the orchestrated Airflow DAG:
 
 Bash
-# Step 1: Boot up real-time ingestion from NOAA to Kafka Cloud
+Step 1: Boot up real-time ingestion from NOAA to Kafka Cloud
 python src/kafka_producer.py
 Bash
-# Step 2: Spin up the Spark cluster to execute distributed stream processing
+Step 2: Spin up the Spark cluster to execute distributed stream processing
 python src/spark_processor.py
 Bash
-# Step 3: Launch the Optimization User Dashboard
+Step 3: Launch the Optimization User Dashboard
 streamlit run src/app.py
 
 ---
