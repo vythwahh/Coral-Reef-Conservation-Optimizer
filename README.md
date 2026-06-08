@@ -62,33 +62,9 @@ $$0 \leq x_i \leq M_i \quad \forall i \in \{1, \dots, N\}$$
 - **Resilient Network Ingestion:** Real-time SST data streaming from NOAA API with automated schema validation and a randomized mock data generator fallback for network resilience.
 - **Distributed Risk Aggregation:** Utilizes PySpark User Defined Functions (UDFs) to process windowed sliding metrics, capturing thermal anomalies indicative of coral bleaching events.
 - **Custom Optimization Solvers:** Implemented foundational Operations Research solvers from scratch, including **Dantzig's rule** for standard pivoting, **Bland's rule** to eliminate cycling loops, and **Two-Phase Simplex** for artificial initial bases.
-- **Production-Ready Guardrails:** Built-in PyTest suites covering extreme constraint edge cases (e.g., zero budget, unfeasible targets) and structured system logging.
+- **Production-Ready Guardrails:** Built-in PyTest suites covering extreme constraint edge cases (e.g., zero budget, unfeasible targets) and structured system ---
 
----
-
-## Project Structure
-
-<pre>
-Coral-Reef-Conservation-Optimizer/
-│
-├── dags/
-│   └── daily_coral_pipeline.py     # Apache Airflow orchestration workflow
-├── src/
-│   ├── kafka_producer.py          # NOAA API ingestion agent & stream producer
-│   ├── spark_processor.py         # Distributed stream processor for risk scoring
-│   ├── optimizer.py               # Custom Simplex Linear Programming Engine
-│   └── app.py                     # Streamlit frontend visualization platform
-├── tests/
-│   ├── test_optimizer.py          # Mathematical verification & constraint edge cases
-│   └── test_processor.py          # PySpark processing data validation tests
-├── data/
-│   └── sample_reef_zones.json     # Mock initial metadata configuration
-├── Dockerfile                     # Containerization setup for portable deployment
-├── requirements.txt               # Pinpointed project dependencies
-└── README.md                      # Comprehensive system documentation
-</pre>
-
----
+ 
 
 ## Execution Guide
 
